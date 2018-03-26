@@ -111,18 +111,23 @@
     <version>1.0.4</version>
 </dependency>
 
+<dependency>
+	<groupId>com.google.appengine</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>1.9.60</version>
+</dependency>
 
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>com.dtdm.MyBlogApplication</mainClass>
 				</configuration>
-			</plugin>
+			</plugin> -->
 
 			 <plugin>
 				<groupId>com.google.appengine</groupId>
