@@ -15,13 +15,33 @@ public class PageController {
 	
 	@GetMapping("/about")
 	public String showAbout(Model model) {
-		model.addAttribute("pageAbout", pageService.findOne("About"));
+		model.addAttribute("page", pageService.findOne("About"));
 		return "about";
 	}
 	
 	@GetMapping("/event")
 	public String showEvent(Model model) {
-		model.addAttribute("pageEvent", pageService.findOne("Event"));
+		model.addAttribute("page", pageService.findOne("Event"));
 		return "event";
+	}
+	@GetMapping("/speakers")
+	public String showSpeakers(Model model) {
+		model.addAttribute("page", pageService.findOne("Speakers"));
+		return "speakers";
+	}
+	@GetMapping("/schedule")
+	public String showSchedule(Model model) {
+		model.addAttribute("page", pageService.findOne("Schedule"));
+		return "schedule";
+	}
+	@GetMapping("/sponsors")
+	public String showSponsors(Model model) {
+		model.addAttribute("page", pageService.findOne("Sponsors"));
+		return "sponsors";
+	}
+	@GetMapping("/venue")
+	public String showVenue(Model model) {
+		model.addAttribute("page", pageService.findOne("Venue"));
+		return "venue";
 	}
 }

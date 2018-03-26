@@ -81,7 +81,10 @@ CREATE TABLE `pages`  (
 -- ----------------------------
 INSERT INTO `pages` VALUES ('About', 'My company is the best, ever ever ever', '<p><u><em><strong>Hello, my name is Rum, i havent ever work in IT, but i will do it after those subject</strong></em></u></p>\r\n\r\n<p><u><em><strong>Hello every one, my name is Rum, this is my first Spring Boot app.</strong></em></u></p>\r\n');
 INSERT INTO `pages` VALUES ('Event', 'Holiday in Vietnam Edit', '<p>This is very happy because thats Vietnam</p>\r\n\r\n<p>Hello 123</p>\r\n\r\n<p><strong>123123123</strong></p>\r\n\r\n<ul>\r\n	<li><strong>hello</strong></li>\r\n	<li><strong>how are you</strong></li>\r\n	<li><strong>im fire</strong></li>\r\n</ul>\r\n');
-
+insert into pages (header, title, content) values ('Speakers', '', '');
+insert into pages (header, title, content) values ('Schedule', '', '');
+insert into pages (header, title, content) values ('Sponsors', '', '');
+insert into pages (header, title, content) values ('Venue', '', '');
 -- ----------------------------
 -- Table structure for posts
 -- ----------------------------

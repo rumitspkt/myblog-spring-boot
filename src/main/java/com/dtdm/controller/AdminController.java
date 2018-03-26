@@ -169,6 +169,30 @@ public class AdminController {
 		model.addAttribute("page", pageService.findOne("About"));
 		return "formPage";
 	}
+	
+	@GetMapping("/formPageSpeakers")
+	public String showFormPageSpeakers(Model model) {
+		model.addAttribute("page", pageService.findOne("Speakers"));
+		return "formPage";
+	}
+	
+	@GetMapping("/formPageSchedule")
+	public String showFormPageSchedule(Model model) {
+		model.addAttribute("page", pageService.findOne("Schedule"));
+		return "formPage";
+	}
+	
+	@GetMapping("/formPageVenue")
+	public String showFormPageVenue(Model model) {
+		model.addAttribute("page", pageService.findOne("Venue"));
+		return "formPage";
+	}
+	
+	@GetMapping("/formPageSponsors")
+	public String showFormPageSponsors(Model model) {
+		model.addAttribute("page", pageService.findOne("Sponsors"));
+		return "formPage";
+	}
 
 	@PostMapping("/formPageSave")
 	public String savePage(RedirectAttributes redirect, @RequestParam("header") String header,
