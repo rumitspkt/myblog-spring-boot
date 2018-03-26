@@ -11,7 +11,7 @@
  Target Server Version : 50721
  File Encoding         : 65001
 
- Date: 25/03/2018 19:11:11
+ Date: 26/03/2018 10:48:11
 */
 
 SET NAMES utf8mb4;
@@ -39,11 +39,17 @@ INSERT INTO `admins` VALUES (2, 'hello', '123123');
 -- ----------------------------
 DROP TABLE IF EXISTS `ggfiles`;
 CREATE TABLE `ggfiles`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_id` int(11) NULL DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `linkdownload` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of ggfiles
+-- ----------------------------
+INSERT INTO `ggfiles` VALUES (3, 'https://drive.google.com/open?id=1upulw1ymlpokXr5zSne0V9ZJITVrqpun', 'KTM-RC.jpg');
+INSERT INTO `ggfiles` VALUES (8, 'https://drive.google.com/uc?id=1LVxEOKIRcPNjYfk4WOZjXbZqFhWXYGmP&export=download', 'addtext_com_MDk1OTA3NDYzNDc.png');
 
 -- ----------------------------
 -- Table structure for hibernate_sequence
@@ -86,7 +92,7 @@ CREATE TABLE `posts`  (
   `subtitle` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `content` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of posts
@@ -95,5 +101,7 @@ INSERT INTO `posts` VALUES (1, 'Man must explore, and this is exploration at its
 INSERT INTO `posts` VALUES (2, 'I believe every human has a finite number of heartbeats. I don\'t intend to waste any of mine. ', '', '<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec mauris urna</strong>. Nulla ut condimentum velit. Maecenas et rhoncus justo, eget cursus turpis. Aliquam non enim odio. Nullam consectetur posuere molestie. Sed in sem faucibus, viverra mi non, semper dolor. Donec eget tortor magna. Sed hendrerit malesuada urna, sit amet faucibus purus tincidunt a. Aliquam quis aliquet velit. In hac habitasse platea dictumst. Quisque laoreet lobort<u><strong><em>is ligula, eget vestibulum diam cursus et. Etiam ultrices, </em></strong></u>enim eu elementum rhoncus, nisi sapien congue augue, nec fermentum nibh m<u>auris sit amet est. Phasellus vel vehicula dia</u>m. Etiam id felis id neque cursus porta sit amet vel orci.</p>\r\n');
 INSERT INTO `posts` VALUES (3, 'Science has not yet mastered prophecy ', '', '<p><em><strong>Nam mollis cursus ante in mollis. Vivamus pulvinar enim vel orci vestibulum rhoncus. Praesent commodo rutrum lorem, vel posuere nulla rhoncus vitae. Fusce efficitur commodo turpis vitae eleifend. Suspendisse dignissim dui sed dapibus venenatis. Fusce bibendum risus felis. Nullam aliquam nibh vitae odio congue, vitae porttitor lacus consectetur. Nulla pretium cursus urna.</strong></em></p>\r\n');
 INSERT INTO `posts` VALUES (5, 'Windows .NET is the borest framework i have erver seen', 'Yeah, click', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec mauris urna. Nulla ut condimentum velit. Maecenas et rhoncus justo, eget cursus turpis. Aliquam non enim odio. Nullam consectetur posuere molestie. Sed in sem faucibus, viverra mi non, semper dolor. Donec eget tortor magna. Sed hendrerit malesuada urna, sit amet faucibus purus tincidunt a. Aliquam quis aliquet velit. In hac habitasse platea dictumst. Quisque laoreet lobortis ligula, eget vestibulum diam cursus et. Etiam ultrices, enim eu elementum rhoncus, nisi sapien congue augue, nec fermentum nibh mauris sit amet est. Phasellus vel vehicula diam. Etiam id felis id neque cursus porta sit amet vel orci. ');
+INSERT INTO `posts` VALUES (7, 'aaaaaaaaaaaaaaa', 'ddddddddddd', '<p>asaaaa</p>\r\n');
+INSERT INTO `posts` VALUES (8, 'qqqqqqqqqqqqqq', 'qqqqqqqqq', '<p>qqqqqqqqqqqqqqqqqqqqqqqqq</p>\r\n');
 
 SET FOREIGN_KEY_CHECKS = 1;
