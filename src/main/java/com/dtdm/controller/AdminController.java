@@ -139,7 +139,10 @@ public class AdminController {
 	@GetMapping("/post/{id}/delete")
 	public String deletePost(@PathVariable int id, RedirectAttributes redirect) {
 		postService.delete(id);
-		ggFileService.delete(id);
+		GgFile ggFile = ggFileService.findOne(id);
+		if(ggFile != null) {
+			ggFileService.delete(id);
+		}		
 		redirect.addFlashAttribute("admin", new Admin(1, "rum", "123"));
 		redirect.addFlashAttribute("success", "Deleted post successfully!");
 		return "redirect:/admin";
